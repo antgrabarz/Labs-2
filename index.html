@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <menu><nav>
+        <ul style="display: flex; gap: 10px; list-style: none;">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./history.html">History</a></li>
+            <li><a href="./trends.html">trends</a></li>
+        </ul>
+    </nav></menu>
+<h1>Overview</h1>
+<h2>Basics</h2>
+<p>Version control systems (VCS) are essential tools that help track changes in files (usually source code) over time. They allow multiple people to collaborate on projects, keep a history of modifications, and revert to earlier versions when needed.</p>
+<h2>Why Distributed Version Control (DVCS) changed the game?</h2>
+<p>In distributed systems like Git or Mercurial, <em>developer has their own full copy of the repository</em>, including the entire history . <b>There is no inherent single master server</b> – every clone can serve as a remote for others. Developers can commit changes locally to their own repository (even offline), and later push those changes to share with others or pull updates from peers. This offers greater flexibility: work can continue even if no central server is accessible, and there’s redundancy (every clone is a backup of the project). Merging is a first-class operation in DVCS, enabling prolific branching and non-linear development workflows. Teams can still designate a “central” repository by convention (for example, a main project repo on GitHub) – but the tools don’t enforce a single point of authority,</p>
+<h3>Branches in nutshell</h3>
+<p>When you make a commit, Git stores a commit object that contains a pointer to the snapshot of the content you staged. This object also contains the author’s name and email address, the message that you typed, and pointers to the commit or commits that directly came before this commit (its parent or parents): zero parents for the initial commit, one parent for a normal commit, and multiple parents for a commit that results from a merge of two or more branches.When you make a commit, Git stores a commit object that contains a pointer to the snapshot of the content you staged. This object also contains the author’s name and email address, the message that you typed, and pointers to the commit or commits that directly came before this commit (its parent or parents): zero parents for the initial commit, one parent for a normal commit, and multiple parents for a commit that results from a merge of two or more branches.</p>
+<p>When you create the commit by running git commit, Git checksums each subdirectory (in this case, just the root project directory) and stores them as a tree object in the Git repository. Git then creates a commit object that has the metadata and a pointer to the root project tree so it can re-create that snapshot when needed.</p>
+
+<h6>Additional references</h6>
+<p><a href="git-scm.com">Git's Official documentation</a></p>
+</body>
+</html>
